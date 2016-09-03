@@ -55,6 +55,7 @@ a {
 body {
   padding: 0 !important;
 }
+
 .appButt {
   background: #1d9ced;
   padding: 30px 0 61px;
@@ -78,13 +79,26 @@ body {
 .marg-video {
   background: #ff3737;
   margin: 0;
-  padding: 65px;
+  padding: 6% 22%;
   text-align: center;
   .framVi {
     border-radius: 13px;
-    width: 750px;
-    height: 400px;
+    float: none;
+      clear: both;
+      width: 100%;
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 25px;
+      height: 0;
   }
+  .framView{
+        border: 7px solid black;
+        border-radius: 13px;
+        position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;}
 }
 .radio_op{
   label{
@@ -198,6 +212,110 @@ footer {
     text-transform: uppercase;
   }
 }
+.foot_main{
+      padding: 27px 0px 20px 0px;text-align: center;
+    }
+.foot_left{   color: #fff; border-right: 2px solid #656464;
+    display: inline-block;
+    font-size: 13px;
+    padding-right: 13px;}
+.foot_right{ display: inline-block;
+    padding-left: 9px;
+    font-size: 12px;
+    text-decoration: underline;}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
+@media (max-width:988px) {
+  .contact_cl h1 {
+      font-weight: bolder;
+      font-size: 30px;
+      color: #000;
+      }
+}
+@media (max-width:1084px) {
+  .contact_cl h1 {
+      font-weight: bolder;
+      font-size: 30px;
+      color: #000;
+      }
+      .conInfo .padd-cont {
+        padding-top: 0px;
+    }
+    .padd-cont-div{
+          padding-bottom: 50px;
+    }
+    .conInfo {
+    padding: 0px 0%;
+}
+.foot {
+    padding: 10% 12% 4%;
+    background: #000;
+}
+.foot .foot_img {
+    width: 37px;
+    padding-right: 5px;
+}
+}
+@media (max-width:922px) {
+  .contact_cl h1 {
+      font-weight: bolder;
+      font-size: 30px;
+      color: #000;
+      }
+      .conInfo .padd-cont {
+        padding-top: 0px;
+    }
+    .padd-cont-div{
+          padding-bottom: 50px;
+    }
+    .conInfo {
+    padding: 0px 0%;
+}
+.foot {
+    padding: 10% 12% 4%;
+    background: #000;
+}
+.foot .foot_img {
+    width: 37px;
+    padding-right: 5px;
+}
+}
+
+@media (max-width:678px) {
+  .conInfo .padd-cont {
+    padding-top: 0px;
+}
+.padd-cont-div{
+      padding-bottom: 50px;
+}
+  .contact_cl h1 {
+      font-weight: bolder;
+      font-size: 20px;
+      color: #000;
+      }
+      .foot {
+    padding: 20% 6% 4%;
+    background: #000;
+}
+.foot code {
+    color: red;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.foot a {
+    color: #fff;
+    font-size: 12px;
+}
+.foot .foot_img {
+    width: 28px;
+    padding-right: 5px;
+}
+
+.conInfo {
+    padding: 0 5%;
+}
+}
