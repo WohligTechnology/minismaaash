@@ -110,6 +110,10 @@ body {
   -webkit-box-shadow: 0px 9px 4px -3px rgb(154, 11, 71);
     -moz-box-shadow: 0px 9px 4px -3px rgb(154, 11, 71);
     box-shadow: 0px 9px 4px -3px rgb(154, 11, 71);
+    background-image: url("../img/pink-bg.jpg");
+  padding: 4% 11%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
     .address_form{height: 60px !important;}
     h1{    font-family: cursive;
     font-weight: bolder;
@@ -118,8 +122,7 @@ body {
     text-shadow: 3px 4px #7D34AC;
     padding-bottom: 35px;}
     .col-md-6,.col-sm-6,.col-xs-12{    padding: 0px 30px 20px;}
-  background-image: url("../img/pink-bg.jpg");
-  padding: 4% 11%;
+
   .sumButt {
     text-align: center;
     padding: 6% 0 1%;
