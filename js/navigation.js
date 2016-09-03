@@ -1,4 +1,4 @@
-var adminURL = "";
+var adminurl="http://10.0.0.35:1337/";
 if(isproduction)
 {
   adminURL =  "http://www.wohlig.co.in/demo/index.php";
@@ -9,7 +9,7 @@ else {
 
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
   var navigation = [{
     name: "Home",
     classis: "active",
@@ -34,6 +34,16 @@ var navigationservice = angular.module('navigationservice', [])
         }
       }
       return menuname;
+    },
+    saveStudentForm: function(formData, callback) {
+
+        $http({
+            url: adminurl + 'UserDetails/save',
+            method: 'POST',
+
+            data: formData
+
+        }).success(callback);
     },
 
   };

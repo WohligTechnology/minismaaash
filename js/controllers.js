@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ksSwiper'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout,NavigationService,$timeout) {
   //Used to name the .html file
 
   console.log("Testing Consoles");
@@ -16,6 +16,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
     'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
   ];
+  $scope.formComplete=false;
+  $scope.formData={};
+$scope.submitStudenForm=function(){
+  if ($scope.formData) {
+    console.log("$scope.formData",$scope.formData);
+    NavigationService.saveStudentForm($scope.formData,function(data){
+      console.log("$scope.formData",$scope.formData);
+      if (data.value==true) {
+          $scope.formComplete=true;
+        console.log("data",data);
+        $timeout(function() {
+            $scope.formComplete = false;
+            $scope.formData = {};
+        }, 2000);
+      }
+    })
+  }
+}
 })
 
 .controller('headerctrl', function($scope, TemplateService) {
