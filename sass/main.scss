@@ -55,7 +55,11 @@ a {
 body {
   padding: 0 !important;
 }
-.error-msg{height: 0px}
+.error-msg {
+  height: 0;
+  margin-top: 8px;
+  color: #800606;
+}
 .appButt {
   background: #1d9ced;
   padding: 30px 0 61px;
@@ -63,12 +67,16 @@ body {
 }
 .radio {
   display: inline-block !important;
-  label{    font-size: 17px;
+  label {
+    font-size: 17px;
     width: 100px;
-    margin-left: 4px;}
-    input{    width: 45px;
+    margin-left: 4px;
+  }
+  input {
+    width: 45px;
     height: 20px;
-  margin-left: -35px !important;}
+    margin-left: -35px !important;
+  }
 }
 .disBlock {
   display: block;
@@ -84,29 +92,33 @@ body {
   .framVi {
     border-radius: 13px;
     float: none;
-      clear: both;
-      width: 100%;
-      position: relative;
-      padding-bottom: 56.25%;
-      padding-top: 25px;
-      height: 0;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
   }
-  .framView{
-        border: 7px solid black;
-        border-radius: 13px;
-        position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;}
+  .framView {
+    border: 7px solid black;
+    border-radius: 13px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
-.radio_op{
-  label{
+.radio_op {
+  label {
     width: 180px;
-    margin-left: 22px;}
-    input{    width: 45px;
+    margin-left: 22px;
+  }
+  input {
+    width: 45px;
     height: 20px;
-  margin-left: -35px !important;}
+    margin-left: -35px !important;
+  }
 }
 .marg-beni {
   background: #f6d400;
@@ -118,34 +130,47 @@ body {
   padding: 4px 14% 101px;
   background-image: url("../img/formbg.jpg");
   background-repeat: no-repeat;
-    background-size: 100% 100%;
+  background-size: 100% 100%;
 }
 .padd-form {
-  -webkit-box-shadow: 0px 9px 4px -3px rgb(154, 11, 71);
-    -moz-box-shadow: 0px 9px 4px -3px rgb(154, 11, 71);
-    box-shadow: 0px 9px 4px -3px rgb(154, 11, 71);
-    background-image: url("../img/pink-bg.jpg");
+  -webkit-box-shadow: 0 9px 4px -3px rgb(154, 11, 71);
+  -moz-box-shadow: 0 9px 4px -3px rgb(154, 11, 71);
+  box-shadow: 0 9px 4px -3px rgb(154, 11, 71);
+  background-image: url("../img/pink-bg.jpg");
   padding: 4% 11%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-    .address_form{height: 60px !important;}
-    h1{    font-family: cursive;
+  .address_form {
+    height: 60px !important;
+  }
+  h1 {
+    font-family: cursive;
     font-weight: bolder;
     text-align: center;
     color: yellow;
     text-shadow: 3px 4px #7D34AC;
-    padding-bottom: 35px;}
-    .col-md-6,.col-sm-6,.col-xs-12{    padding: 0px 30px 20px;}
-
+    padding-bottom: 35px;
+  }
+  .col-md-6,
+  .col-sm-6,
+  .col-xs-12 {
+        height: 107px;
+    padding: 0 30px 35px;
+  }
+  .marg-12{height: 120px !important;}
   .sumButt {
     text-align: center;
     padding: 6% 0 1%;
-    button{ background: #ea2b7b;
-    border: none;
-    outline: none;}
+    button {
+      background: #ea2b7b;
+      border: none;
+      outline: none;
+    }
   }
-  label{color:#fff;
-      font-size: 17px;}
+  label {
+    color: #fff;
+    font-size: 17px;
+  }
 }
 .row {
   margin: 0 !important;
@@ -212,110 +237,114 @@ footer {
     text-transform: uppercase;
   }
 }
-.foot_main{
-      padding: 27px 0px 20px 0px;text-align: center;
-    }
-.foot_left{   color: #fff; border-right: 2px solid #656464;
-    display: inline-block;
-    font-size: 13px;
-    padding-right: 13px;}
-.foot_right{ display: inline-block;
-    padding-left: 9px;
-    font-size: 12px;
-    text-decoration: underline;}
+.foot_main {
+  padding: 27px 0 20px;
+  text-align: center;
+}
+.foot_left {
+  color: #fff;
+  border-right: 2px solid #656464;
+  display: inline-block;
+  font-size: 13px;
+  padding-right: 13px;
+}
+.foot_right {
+  display: inline-block;
+  padding-left: 9px;
+  font-size: 12px;
+  text-decoration: underline;
+}
 //bootstrap forms
 /* Start writing sass here */
 @import "fancybox-override";
 @media (max-width:988px) {
   .contact_cl h1 {
-      font-weight: bolder;
-      font-size: 30px;
-      color: #000;
-      }
+    font-weight: bolder;
+    font-size: 30px;
+    color: #000;
+  }
 }
 @media (max-width:1084px) {
   .contact_cl h1 {
-      font-weight: bolder;
-      font-size: 30px;
-      color: #000;
-      }
-      .conInfo .padd-cont {
-        padding-top: 0px;
-    }
-    .padd-cont-div{
-          padding-bottom: 50px;
-    }
-    .conInfo {
-    padding: 0px 0%;
-}
-.foot {
+    font-weight: bolder;
+    font-size: 30px;
+    color: #000;
+  }
+  .conInfo .padd-cont {
+    padding-top: 0;
+  }
+  .padd-cont-div {
+    padding-bottom: 50px;
+  }
+  .conInfo {
+    padding: 0;
+  }
+  .foot {
     padding: 10% 12% 4%;
     background: #000;
-}
-.foot .foot_img {
+  }
+  .foot .foot_img {
     width: 37px;
     padding-right: 5px;
-}
+  }
 }
 @media (max-width:922px) {
   .contact_cl h1 {
-      font-weight: bolder;
-      font-size: 30px;
-      color: #000;
-      }
-      .conInfo .padd-cont {
-        padding-top: 0px;
-    }
-    .padd-cont-div{
-          padding-bottom: 50px;
-    }
-    .conInfo {
-    padding: 0px 0%;
-}
-.foot {
+    font-weight: bolder;
+    font-size: 30px;
+    color: #000;
+  }
+  .conInfo .padd-cont {
+    padding-top: 0;
+  }
+  .padd-cont-div {
+    padding-bottom: 50px;
+  }
+  .conInfo {
+    padding: 0;
+  }
+  .foot {
     padding: 10% 12% 4%;
     background: #000;
-}
-.foot .foot_img {
+  }
+  .foot .foot_img {
     width: 37px;
     padding-right: 5px;
+  }
 }
-}
-
 @media (max-width:678px) {
   .conInfo .padd-cont {
-    padding-top: 0px;
-}
-.padd-cont-div{
-      padding-bottom: 50px;
-}
+    padding-top: 0;
+  }
+  .padd-cont-div {
+    padding-bottom: 50px;
+  }
   .contact_cl h1 {
-      font-weight: bolder;
-      font-size: 20px;
-      color: #000;
-      }
-      .foot {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #000;
+  }
+  .foot {
     padding: 20% 6% 4%;
     background: #000;
-}
-.foot code {
+  }
+  .foot code {
     color: red;
     padding: 0;
     background: none;
     border-radius: 0;
     font-size: 14px;
     font-weight: 600;
-}
-.foot a {
+  }
+  .foot a {
     color: #fff;
     font-size: 12px;
-}
-.foot .foot_img {
+  }
+  .foot .foot_img {
     width: 28px;
     padding-right: 5px;
-}
-
-.conInfo {
+  }
+  .conInfo {
     padding: 0 5%;
-}
+  }
 }

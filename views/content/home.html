@@ -31,7 +31,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <label for="name">Name </label>
           <input type="name" class="form-control" id="name" name="name" ng-model="formData.name" required>
-<div class="error-msg" ng-show="user.name.$error.required && user.name.$touched">Please Enter Your Name </div>
+          <div class="error-msg" ng-show="user.name.$error.required && user.name.$touched">Please Enter Your Name </div>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -66,7 +66,7 @@
           <input type="text" class="form-control"  id="collage_name" name="collegeName" ng-model="formData.collegeName" required>
           <div class="error-msg" ng-show="user.collegeName.$error.required && user.collegeName.$touched">Please Enter Your Collage Name</div>
         </div>
-        <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 marg-12">
           <label>Address</label>
           <input type="text" class="form-control address_form" id="address" name="address" ng-model="formData.address" required>
           <div class="error-msg" ng-show="user.address.$error.required && user.address.$touched">Please Enter Your Address.</div>
