@@ -10,8 +10,8 @@
 $brand-primary: #0d9dff !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
-$brand-danger:  #fc483f !default;
-$brand-info:    #000072 !default;
+$brand-danger: #fc483f !default;
+$brand-info: #000072 !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 body {
   padding-top: 70px;
@@ -32,17 +32,18 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
   display: block;
 }
-a, .btn {
+.btn,
+a {
   cursor: pointer;
   @include transition(all ease 300ms);
 }
 //bootstrap forms
-.input-lg,
+.btn,
+.form-control,
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
-.btn,
-.form-control {
+.input-lg {
   border-radius: 0;
   @include box-shadow(none);
 }
@@ -51,86 +52,145 @@ a, .btn {
   outline: 0;
   @include box-shadow(none);
 }
-body{
-  padding:0px !important
+body {
+  padding: 0 !important;
 }
-.appButt{
+.appButt {
   background: #1d9ced;
-  padding: 30px 0px 61px;
-    text-align: center;}
-
-.radio{
-  display:inline-block !important
+  padding: 30px 0 61px;
+  text-align: center;
 }
-.disBlock{
-  display:block
+.radio {
+  display: inline-block !important;
+  label{    font-size: 17px;
+    width: 100px;
+    margin-left: 4px;}
+    input{    width: 45px;
+    height: 20px;
+  margin-left: -35px !important;}
 }
-.marg-img{
-  padding: 15px 0px;
+.disBlock {
+  display: block;
 }
-
-.marg-video{
-   background: #ff3737;
-    margin: 0px;
-    padding: 65px;
-    text-align: center;
-    .framVi{    border-radius: 13px;
+.marg-img {
+  padding: 15px 0;
+}
+.marg-video {
+  background: #ff3737;
+  margin: 0;
+  padding: 65px;
+  text-align: center;
+  .framVi {
+    border-radius: 13px;
     width: 750px;
-      height: 400px;
-    }
+    height: 400px;
   }
-  .marg-beni{
-       background: #f6d400;
-       .padd-beni{
-           padding: 4% 12%;}
 }
-.padd_form1{     padding: 4px 14% 101px;;  background-image: url("../img/formbg.jpg");
+.radio_op{
+  label{
+    width: 180px;
+    margin-left: 22px;}
+    input{    width: 45px;
+    height: 20px;
+  margin-left: -35px !important;}
+}
+.marg-beni {
+  background: #f6d400;
+  .padd-beni {
+    padding: 4% 12%;
+  }
+}
+.padd_form1 {
+  padding: 4px 14% 101px;
+  background-image: url("../img/formbg.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;}
-.padd-form{    background: #EA2B7B;
-    padding: 4% 11%;
-  .sumButt{text-align:center;    padding: 6% 0% 1%;}
+    background-size: 100% 100%;
 }
-.row{margin:0px !important}
-.contact_cl{    background: #F6D400;
+.padd-form {
+  -webkit-box-shadow: 0px 9px 4px -3px rgb(154, 11, 71);
+    -moz-box-shadow: 0px 9px 4px -3px rgb(154, 11, 71);
+    box-shadow: 0px 9px 4px -3px rgb(154, 11, 71);
+    .address_form{height: 60px !important;}
+    h1{    font-family: cursive;
+    font-weight: bolder;
     text-align: center;
-  h1{font-weight: bolder;font-size: 45px;
+    color: yellow;
+    text-shadow: 3px 4px #7D34AC;
+    padding-bottom: 35px;}
+    .col-md-6,.col-sm-6,.col-xs-12{    padding: 0px 30px 20px;}
+  background-image: url("../img/pink-bg.jpg");
+  padding: 4% 11%;
+  .sumButt {
+    text-align: center;
+    padding: 6% 0 1%;
+  }
+  label{color:#fff;
+      font-size: 17px;}
 }
+.row {
+  margin: 0 !important;
 }
-footer{  background: black;}
-.foot{
-        padding: 10% 24% 4%;
+.contact_cl {
+  background: #F6D400;
+  text-align: center;
+  h1 {
+    font-weight: bolder;
+    font-size: 49px;
+    color: #000;
+  }
+}
+footer {
+  background: black;
+}
+.foot {
+  padding: 10% 24% 4%;
   background: #000;
-  .foot_img{         width: 47px;
-    padding-right: 5px;}
-  a{color: #fff;
-        font-size: 16px;}
-        &a:hover{color: #fff;
-              font-size: 16px;}
-    span{    float: left;    padding: 0px 7px;}
-    code{    color: red;
-    padding: 0px;
+  .foot_img {
+    width: 47px;
+    padding-right: 5px;
+  }
+  a {
+    color: #fff;
+    font-size: 16px;
+  }
+  &a:hover {
+    color: #fff;
+    font-size: 16px;
+  }
+  span {
+    float: left;
+    padding: 0 7px;
+  }
+  code {
+    color: red;
+    padding: 0;
     background: none;
-    border-radius: 0px;
+    border-radius: 0;
     font-size: 19px;
-    font-weight: 600;}
-    p{color:#fff;}
+    font-weight: 600;
+  }
 }
-
-
-
+.conInfo {
+  padding: 0 9%;
+  p {
+    color: #fff;
+  }
+  .padd-cont {
+    padding-top: 70px;
+  }
+}
 .form-group {
-    position: relative;
-    .error-msg {
-        position: absolute;
-        right: 0;
-        //background-color: $red;
-        color: white;
-        padding: 5px 10px;
-        font-size: 10px;
-        bottom: -23px;
-        text-transform: uppercase;
-    }
+  position: relative;
+  .error-msg {
+    position: absolute;
+    right: 0;
+    //background-color: $red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 10px;
+    bottom: -23px;
+    text-transform: uppercase;
+  }
 }
 //bootstrap forms
 /* Start writing sass here */
