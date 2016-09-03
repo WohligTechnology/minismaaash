@@ -36,7 +36,8 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <label for="email">Email Id</label>
           <input type="email" class="form-control" id="email" name="email" ng-model="formData.email" required>
-          <div class="error-msg" ng-show="user.email.$error.required && user.email.$touched">Please Enter Your Email ID </div>
+          <div class="error-msg" ng-show="user.email.$error.required && user.email.$touched">Please Enter Your Email Id </div>
+          <div ng-if="exist">Email Already Exist</div>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -49,6 +50,7 @@
           <label for="phone number">Phone No.</label>
           <input type="text" class="form-control" id="phone_number" name="mobileNumber" ng-model="formData.mobileNumber" required only-digits>
             <div class="error-msg" ng-show="user.mobileNumber.$error.required && user.mobileNumber.$touched">Please Enter Your Phone No.</div>
+            <div ng-if="validMobileno">Enter valid Phone Number</div>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12">
