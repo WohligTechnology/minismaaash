@@ -57,13 +57,17 @@ body {
 }
 .error-msg {
   height: 0;
-  margin-top: 8px;
   color: #800606;
+  font-size: 13px;
 }
 .appButt {
   background: #1d9ced;
   padding: 30px 0 61px;
   text-align: center;
+  a{display:block !important}
+  a:focus, a:hover {
+    text-decoration: none;
+ }
 }
 .radio {
   display: inline-block !important;
@@ -140,6 +144,7 @@ body {
   padding: 4% 11%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  .form-control{    margin-bottom: 9px;}
   .address_form {
     height: 60px !important;
   }
@@ -157,10 +162,11 @@ body {
         height: 107px;
     padding: 0 30px 35px;
   }
+  .nh{height: auto !important}
   .marg-12{height: 120px !important;}
   .sumButt {
     text-align: center;
-    padding: 6% 0 1%;
+    margin: 11% 0 0%;
     button {
       background: #ea2b7b;
       border: none;
@@ -202,7 +208,7 @@ footer {
     color: #fff;
     font-size: 16px;
   }
-  span {
+  p {
     float: left;
     padding: 0 7px;
   }
@@ -237,6 +243,7 @@ footer {
     text-transform: uppercase;
   }
 }
+.img-s{width: 150px}
 .foot_main {
   padding: 27px 0 20px;
   text-align: center;
@@ -273,9 +280,6 @@ footer {
   .conInfo .padd-cont {
     padding-top: 0;
   }
-  .padd-cont-div {
-    padding-bottom: 50px;
-  }
   .conInfo {
     padding: 0;
   }
@@ -289,6 +293,8 @@ footer {
   }
 }
 @media (max-width:922px) {
+  .ptd{    padding-bottom: 15px;
+    padding-top: 15px;}
   .contact_cl h1 {
     font-weight: bolder;
     font-size: 30px;
@@ -296,9 +302,6 @@ footer {
   }
   .conInfo .padd-cont {
     padding-top: 0;
-  }
-  .padd-cont-div {
-    padding-bottom: 50px;
   }
   .conInfo {
     padding: 0;
@@ -312,10 +315,47 @@ footer {
     padding-right: 5px;
   }
 }
-@media (max-width:678px) {
+
+@media (min-width:768px) {
+.md{    margin-bottom: 53px;}
+.padd-form h1{font-size: 12px;}
+.foot {
+  padding: 20% 6% 4%;
+  background: #000;
+}
+
+}
+@media (max-width:768px) {
+  .ht{    height: 130px;}
+  .contact_cl h1 {
+      font-weight: bolder;
+      font-size: 16px;
+      color: #000;
+  }
+  .foot {
+      padding: 24% 6% 4%;
+      background: #000;
+  }
+  .padd-form label{    color: #fff;
+    font-size: 13px;}
+    .padd-form .form-control {
+    margin-bottom: 9px;
+    height: 26px;
+padding: 2px 6px;
+font-size: 14px;
+}
+.fsiz p{    font-size: 12px;}
+  .img-s {
+    width: 120px;
+}
+  .padd-form h1{font-size: 20px;}
+  .fm{    padding: 30px 0px;
+      border-bottom: 1px solid #383737;}
 .freebirdFormviewerViewFormBanner {
    height: auto !important;
 }
+.center-f{    text-align: center;}
+
 .back-to-top{
   display: block !important;
   opacity: 1 !important;
@@ -326,18 +366,8 @@ footer {
   .conInfo .padd-cont {
     padding-top: 0;
   }
-  .padd-cont-div {
-    padding-bottom: 50px;
-  }
-  .contact_cl h1 {
-    font-weight: bolder;
-    font-size: 20px;
-    color: #000;
-  }
-  .foot {
-    padding: 20% 6% 4%;
-    background: #000;
-  }
+
+
   .foot code {
     color: red;
     padding: 0;

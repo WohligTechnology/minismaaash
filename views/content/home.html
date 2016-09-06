@@ -1,7 +1,7 @@
 
 <!--video  start-->
 <div class="appButt">
-  <a href="#targetDiv"  class="back-to-top" scroll-to-item scroll-to="#top-scroll" style="display: block;"><img src="img/apply-now.png"  alt="banner" width="150px" height=""></a>
+  <a href="#targetDiv"  class="back-to-top" scroll-to-item scroll-to="#top-scroll" style="display: block;"><img src="img/apply-now.png"  alt="banner" class="img-s"></a>
 </div>
 <div class="row marg-video">
 
@@ -35,30 +35,30 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <label for="name">Name </label>
           <input type="name" class="form-control" id="name" name="name" ng-model="formData.name" required>
-          <div class="error-msg" ng-show="user.name.$error.required && user.name.$touched">Please Enter Your Name </div>
+          <div class="error-msg" ng-show="user.name.$error.required && user.name.$touched">Please Enter Your Name* </div>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12">
           <label for="email">Email Id</label>
           <input type="email" class="form-control" id="email" name="email" ng-model="formData.email" required>
-          <div class="error-msg" ng-show="user.email.$error.required && user.email.$touched">Please Enter Your Email Id </div>
+          <div class="error-msg" ng-show="user.email.$error.required && user.email.$touched">Please Enter Your Email Id *</div>
           <div ng-if="exist">Email Already Exist</div>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12">
           <label for="age">Age</label>
           <input type="text" class="form-control" id="age" name="age" ng-model="formData.age" only-digits>
-          <div class="error-msg" ng-show="user.age.$error.required && user.age.$touched" >Please Enter Your Age </div>
+          <div class="error-msg" ng-show="user.age.$error.required && user.age.$touched" >Please Enter Your Age* </div>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12">
           <label for="phone number">Phone No.</label>
           <input type="text" class="form-control" id="phone_number" name="mobileNumber" ng-model="formData.mobileNumber" required only-digits>
-            <div class="error-msg" ng-show="user.mobileNumber.$error.required && user.mobileNumber.$touched">Please Enter Your Phone No.</div>
+            <div class="error-msg" ng-show="user.mobileNumber.$error.required && user.mobileNumber.$touched">Please Enter Your Phone No.*</div>
             <div ng-if="validMobileno">Enter valid Phone Number</div>
         </div>
 
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12 nh">
           <label class="disBlock">Gender</label>
           <span class="radio"><label for="user_basic_sex_male"><input class="radio_buttons optional"  name="gender" type="radio" value="Male" ng-model="formData.gender" required>Male</label></span>
 
@@ -68,20 +68,20 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <label >Collage Name</label>
           <input type="text" class="form-control"  id="collage_name" name="collegeName" ng-model="formData.collegeName" required>
-          <div class="error-msg" ng-show="user.collegeName.$error.required && user.collegeName.$touched">Please Enter Your Collage Name</div>
+          <div class="error-msg" ng-show="user.collegeName.$error.required && user.collegeName.$touched">Please Enter Your Collage Name*</div>
         </div>
-        <div class="col-md-12 col-sm-12 col-xs-12 marg-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 marg-12 ht">
           <label>Address</label>
           <input type="text" class="form-control address_form" id="address" name="address" ng-model="formData.address" required>
-          <div class="error-msg" ng-show="user.address.$error.required && user.address.$touched">Please Enter Your Address.</div>
+          <div class="error-msg" ng-show="user.address.$error.required && user.address.$touched">Please Enter Your Address.*</div>
         </div>
-        <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 ht---777777777777">
           <label>Facebook ID/Profile Link:</label>
           <input type="text" class="form-control"  id="Facebook_id" name="fbIDLink" ng-model="formData.fbIDLink" required>
-          <div class="error-msg" ng-show="user.fbIDLink.$error.required && user.fbIDLink.$touched">Please Enter Your Facebook ID/Profile Link.</div>
+          <div class="error-msg" ng-show="user.fbIDLink.$error.required && user.fbIDLink.$touched">Please Enter Your Facebook ID/Profile Link.*</div>
         </div>
     <!--start facebook-->
-        <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 nh">
           <label class="disBlock">How many Friends do you have on Facebook:</label>
           <span class="radio_op"><label><input class="radio_buttons optional"  name="friendsOnFb" type="radio" value="Less than 500"  ng-model="formData.friendsOnFb">Less than 500</label></span>
 
@@ -94,7 +94,7 @@
           <label >Twitter Handle:</label>
           <input type="text" class="form-control"  id="Twitter_handle" name="twitterHandle" ng-model="formData.twitterHandle">
         </div>
-        <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 nh">
           <label class="disBlock">Number of Twitter Followers:</label>
           <span class="radio_op"><label><input class="radio_buttons optional"  name="twitterFollowers" type="radio" value="Less than 100" ng-model="formData.twitterFollowers">Less than 100</label></span>
 
@@ -108,7 +108,7 @@
           <input type="" class="form-control" id="Instagram_handle" name="instagramHandle" ng-model="formData.instagramHandle" >
         </div>
 
-        <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 nh">
           <label class="disBlock">Number of Instagram Followers:</label>
 
           <span class="radio_op"><label><input class="radio_buttons optional"  name="instagramFollowers" type="radio" value="Less than 800" ng-model="formData.instagramFollowers">Less than 800</label></span>
@@ -122,7 +122,7 @@
           <label >Snapchat Id:</label>
           <input type="" class="form-control" id="Snapchat_id" name="snapchatId" ng-model="formData.snapchatId" >
         </div>
-        <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 nh">
           <label class="disBlock">Number of Snapchat Followers:</label>
           <span class="radio_op"><label><input class="radio_buttons optional"  name="snapchatFollowers" type="radio" value="Less than 200"  ng-model="formData.snapchatFollowers">Less than 200</label></span>
 
@@ -131,18 +131,18 @@
           <span class="radio_op"><label><input class="radio_buttons optional"  name="snapchatFollowers" type="radio" value="500 & above"  ng-model="formData.snapchatFollowers">500 & above</label></span>
         </div>
       <!--start comments for achievements-->
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12 nh">
           <label class="disBlock">Your Interests</label>
           <textarea class="form-control" rows="5" id="comment" name="yourInterests" ng-model="formData.yourInterests" required></textarea>
-            <div class="error-msg" ng-show="user.yourInterests.$error.required && user.yourInterests.$touched">Please Enter Your Interests.</div>
+            <div class="error-msg" ng-show="user.yourInterests.$error.required && user.yourInterests.$touched">Please Enter Your Interests.*</div>
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12 nh">
           <label class="disBlock">Achievements</label>
             <textarea class="form-control" rows="5" id="comment" name="achievements" ng-model="formData.achievements" required></textarea>
-            <div class="error-msg" ng-show="user.achievements.$error.required && user.achievements.$touched">Please Enter Your Achievements.</div>
+            <div class="error-msg" ng-show="user.achievements.$error.required && user.achievements.$touched">Please Enter Your Achievements.*</div>
         </div>
         <!--start collage club-->
-        <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 nh">
           <label class="disBlock">Are you a Part of any college club/society?</label>
           <span class="radio_op"><label><input class="radio_buttons optional"  name="partOf" type="radio" value="yes" ng-model="formData.partOf" required>Yes</label></span>
           <span class="radio_op"><label><input class="radio_buttons optional" name="partOf" type="radio" value="no" ng-model="formData.partOf" required>No</label></span>
@@ -151,10 +151,10 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <label class="disBlock">Describe yourself in 140 characters</label>
             <textarea class="form-control" rows="5" id="comment" name="describeYourself" nd-model="formData.describeYourself" required></textarea>
-            <div class="error-msg" ng-show="user.describeYourself.$error.required && user.describeYourself.$touched">Please Describe yourself .</div>
+            <div class="error-msg" ng-show="user.describeYourself.$error.required && user.describeYourself.$touched">Please Describe yourself.*</div>
         </div>
-        <div class="col-md-12 col-sm-12 col-xs-12 sumButt">
-            <button type="submit"><img src="img/apply-now.png"  alt="banner" width="150px" height=""></button>
+        <div class="col-md-12 col-sm-12 col-xs-12 sumButt nh">
+            <button type="submit"><img src="img/submitbtn.png"  class="img-s"></button>
         </div>
       </form>
       <div class="submit-thank" ng-if="formComplete">
