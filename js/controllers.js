@@ -16,6 +16,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
     'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
   ];
+
+  $(window).scroll(function() {
+      if ($(this).scrollTop() > 500) {
+          $('.back-to-top ').fadeIn();
+      } else {
+          $('.back-to-top ').fadeOut();
+      }
+  });
+
 })
 
 .controller('headerctrl', function($scope, TemplateService) {

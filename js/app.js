@@ -21,7 +21,39 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
 });
+firstapp.directive('scrollToTop', function() {
+  return {
+    restrict: 'A',
+    link: function(scope, elm, attr) {
+      var isTop;
+      //bind changes from scope to our view: set isTop variable
+      //depending on what scope variable is. If scope value
+      //changes to true and we aren't at top, go to top
+      scope.$watch(attr.scrollToTop, function(newValue) {
+        newValue = !!newValue; //to boolean
+        if (!isTop && newValue) {
+          elm[0].scrollTo(0,0);
+        }
+        isTop = newValue;
+      });
 
+      //If we are at top and we scroll down, set isTop and
+      //our variable on scope to false.
+      elm.bind('scroll', function() {
+        if (elm[0].scrollTop !==0 && isTop) {
+          //Use $apply to tell angular
+          //'hey, we are gonna change something from outside angular'
+          scope.$apply(function() {
+            //(we should use $parse service here, but simple for example)
+            scope[attr.scrollTop] = false;
+            isTop = false;
+          });
+        }
+      });
+
+    }
+  };
+});
 
 firstapp.directive('img', function($compile, $parse) {
   return {
@@ -41,6 +73,22 @@ firstapp.directive('img', function($compile, $parse) {
       }
     }
   };
+});
+firstapp.directive('scrollToItem', function() {
+    return {
+        restrict: 'A',
+        scope: {
+            scrollTo: "@"
+        },
+        link: function(scope, $elm, attr) {
+
+            $elm.on('click', function() {
+                $('html,body').animate({
+                    scrollTop: $(scope.scrollTo).offset().top
+                }, "slow");
+            });
+        }
+    }
 });
 
 firstapp.directive('fancyboxBox', function($document) {
