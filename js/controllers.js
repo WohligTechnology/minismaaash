@@ -10,6 +10,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 500) {
+          $('.back-to-top ').fadeIn();
+      } else {
+          $('.back-to-top ').fadeOut();
+      }
+  });
+
     $scope.mySlides = [
         'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
         'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
@@ -51,13 +59,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }
     }
 
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > 500) {
-          $('.back-to-top ').fadeIn();
-      } else {
-          $('.back-to-top ').fadeOut();
-      }
-  });
+
 })
 
 .controller('headerctrl', function($scope, TemplateService) {
