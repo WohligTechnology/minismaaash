@@ -1,4 +1,5 @@
-var adminurl="http://10.0.0.35:1337/";
+var adminurl="http://104.154.89.21:89/api/";
+// var adminurl="http://10.0.0.35:1337/";
 if(isproduction)
 {
   adminURL =  "http://www.wohlig.co.in/demo/index.php";

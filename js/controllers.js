@@ -33,6 +33,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             console.log("$scope.formData", $scope.formData);
             NavigationService.saveStudentForm($scope.formData, function(data) {
                 console.log("$scope.formData", $scope.formData);
+                console.log("iminnavigation");
                 console.log("dataformData", data);
                 if (data.value == true) {
                     $scope.formComplete = true;
