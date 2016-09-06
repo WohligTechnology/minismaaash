@@ -107,6 +107,23 @@ firstapp.directive('scrollToTop', function() {
     }
   };
 });
+firstapp.directive('scrollToItem', function() {
+    return {
+        restrict: 'A',
+        scope: {
+            scrollTo: "@"
+        },
+        link: function(scope, $elm, attr) {
+
+            $elm.on('click', function() {
+                $('html,body').animate({
+                    scrollTop: $(scope.scrollTo).offset().top
+                }, "slow");
+            });
+        }
+    }
+});
+
 firstapp.directive('onlyDigits', function() {
     return {
         require: 'ngModel',
